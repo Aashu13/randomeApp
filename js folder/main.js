@@ -57,8 +57,6 @@ var quoteObjects = [
   }
 ];
 
-var imgArray = ["../images/dream.jpg", "../images/creatinglife.jpg"];
-
 var i = 0;
 
 function renderQuotesFunction() {
