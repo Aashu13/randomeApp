@@ -1,14 +1,16 @@
-var quoteObjects = [{
-    Quote: "Dream is not what you see in sleep is the thing which does't let you sleep",
+var quoteObjects = [
+  {
+    Quote:
+      "Dream is not what you see in sleep is the thing which does't let you sleep",
     author: "A.P.j Abdul Kalam",
     imgUrl: "../images/creatinglife.jpg"
   },
 
   {
-    Quote: "All our dreams can come true if we have the courage to pursue them.",
+    Quote:
+      "All our dreams can come true if we have the courage to pursue them.",
     author: "Walt Disney",
     imgUrl: "../images/dream.jpg"
-
   },
 
   {
@@ -43,7 +45,8 @@ var quoteObjects = [{
     imgUrl: "../images/practice.jpg"
   },
   {
-    Quote: "Life is not about finding yourself. Life is about creating yourself",
+    Quote:
+      "Life is not about finding yourself. Life is about creating yourself",
     author: "Lolly Daskal",
     imgUrl: "../images/success.jpg"
   },
@@ -54,12 +57,7 @@ var quoteObjects = [{
   }
 ];
 
-var imgArray = [
-  "../images/dream.jpg",
-
-  "../images/creatinglife.jpg"
-]
-
+var imgArray = ["../images/dream.jpg", "../images/creatinglife.jpg"];
 
 var i = 0;
 
@@ -69,22 +67,17 @@ function renderQuotesFunction() {
   para.style.fontSize = "25px";
   para.style.textAlign = "center";
 
-  var author_Name = document.getElementById('auther_Name');
+  var author_Name = document.getElementById("auther_Name");
   author_Name.textContent = quoteObjects[i].author;
 
-  document.body.style.backgroundImage = imagArra
-
+  document.body.style.backgroundImage = quoteObjects[i].imgUrl;
 
   i++;
 
-
   if (i == quoteObjects.length) {
-
     i = 0;
   }
-
 }
-
 
 renderQuotesFunction();
 
@@ -92,8 +85,8 @@ document
   .getElementById("newQuote_btn")
   .addEventListener("click", renderQuotesFunction);
 
-document.getElementById('previousQuote_btn').addEventListener("click", function () {
-
-  window.history.back();
-
-});
+document
+  .getElementById("previousQuote_btn")
+  .addEventListener("click", function() {
+    window.history.back();
+  });
