@@ -2,6 +2,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h2 {
@@ -25,6 +27,7 @@ h2 {
 
 .paraDiv {
   width: 60%;
+  color: red;
   padding: 20px 0;
   margin: auto;
   display: flex;
@@ -33,6 +36,7 @@ h2 {
 
 .autherName {
   width: 60%;
+  color: red;
   margin: auto;
   text-align: center;
 }
@@ -40,11 +44,20 @@ h2 {
 .btns {
   width: 80%;
   margin: auto;
-  color: #ddd;
+  text-align: center;
   position: relative;
-  top: 20px;
+  top: 30px;
 }
 
-.btns button:nth-child(2) {
+#twitter {
+  font-size: 60px;
+  color: #55acee;
+  cursor: pointer;
+}
+.btns button:nth-child(1) {
+  float: left;
+}
+
+.btns button:nth-child(3) {
   float: right;
 }

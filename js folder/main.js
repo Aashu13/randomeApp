@@ -1,59 +1,61 @@
 var quoteObjects = [
+
   {
-    Quote:
-      "Dream is not what you see in sleep is the thing which does't let you sleep",
+    Quote: "Dream is not what you see in sleep is the thing which does't let you sleep",
     author: "A.P.j Abdul Kalam",
-    imgUrl: "../images/creatinglife.jpg"
+    Image: 'url("./images/dream.jpg")'
+
   },
 
   {
-    Quote:
-      "All our dreams can come true if we have the courage to pursue them.",
+    Quote: "All our dreams can come true if we have the courage to pursue them.",
     author: "Walt Disney",
-    imgUrl: "../images/dream.jpg"
+    Image: 'url("./images/practice.jpg")'
   },
 
   {
     Quote: "If you do what you always did, you will get what you always got",
     author: "Anonymous",
-    imgUrl: "../images/creatinglife.jpg"
+    Image: 'url("./images/sucess.jpg")'
   },
 
   {
     Quote: "You may have to fight a battle more than once to win it",
     author: "Margaret Thatcher",
-    imgUrl: "../images/fear.jpg"
+    Image: 'url("./images/fight.jpg")'
+
   },
   {
     Quote: "Winners are not those who never fail but who those never quit",
     author: "denny",
-    imgUrl: "../images/fight.jpg"
+    Image: 'url("./images/neverquit.jpg")'
+
+
   },
   {
     Quote: "Don't let what you can not do interfere with what you can do.",
     author: "John R. Wooden",
-    imgUrl: "../images/interface.jpg"
+    Image: 'url("./images/inter.jpg")'
   },
   {
     Quote: "To live a creative life, we must lose our fear of being wrong",
     author: "Anonymous",
-    imgUrl: "../images/neverquit.jpg"
+    Image: 'url("./images/fear.jpg")'
   },
   {
     Quote: "No one can make you feel inferior without your consent.",
     author: "Eleanor Roosevelt",
-    imgUrl: "../images/practice.jpg"
+    Image: 'url("./images/sad.jpg")'
   },
   {
-    Quote:
-      "Life is not about finding yourself. Life is about creating yourself",
+    Quote: "Life is not about finding yourself. Life is about creating yourself",
     author: "Lolly Daskal",
-    imgUrl: "../images/success.jpg"
+    Image: 'url("./images/creatinglife.jpg")'
   },
   {
     Quote: "I find that the harder I work, the more luck I seem to have.",
     author: "Thomas Jefferson",
-    imgUrl: "../images/sad.jpg"
+    Image: 'url("./images/luck.jpg")'
   }
 ];
 
@@ -64,11 +66,15 @@ function renderQuotesFunction() {
   para.textContent = quoteObjects[i].Quote;
   para.style.fontSize = "25px";
   para.style.textAlign = "center";
+  para.style.color = quoteObjects[i].color;
+  para.style.transition = "all 2s";
 
   var author_Name = document.getElementById("auther_Name");
   author_Name.textContent = quoteObjects[i].author;
+  author_Name.style.transition = "all 2s";
 
-  document.body.style.backgroundImage = quoteObjects[i].imgUrl;
+  document.body.style.backgroundImage = quoteObjects[i].Image;
+  document.body.style.transition = "all 2s";
 
   i++;
 
@@ -79,12 +85,4 @@ function renderQuotesFunction() {
 
 renderQuotesFunction();
 
-document
-  .getElementById("newQuote_btn")
-  .addEventListener("click", renderQuotesFunction);
-
-document
-  .getElementById("previousQuote_btn")
-  .addEventListener("click", function() {
-    window.history.back();
-  });
+document.getElementById('newQuote_btn').addEventListener("click", renderQuotesFunction);
