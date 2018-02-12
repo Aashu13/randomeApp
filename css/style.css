@@ -9,7 +9,10 @@ body {
 h2 {
   text-align: center;
   font-size: 60px;
+  color: #fff;
+  text-shadow: 2px 3px 3px #fff;
 }
+
 .wrapper {
   width: 100%;
   position: relative;
@@ -27,37 +30,46 @@ h2 {
 
 .paraDiv {
   width: 60%;
-  color: red;
   padding: 20px 0;
   margin: auto;
   display: flex;
   justify-content: center;
 }
 
+p {
+  color: #fff;
+  text-shadow: 2px 1px 1px #fff;
+}
+
 .autherName {
   width: 60%;
-  color: red;
+  color: #fff;
   margin: auto;
   text-align: center;
+  text-shadow: 2px 1px 1px #fff;
 }
 
 .btns {
   width: 80%;
   margin: auto;
-  text-align: center;
   position: relative;
-  top: 30px;
-}
-
-#twitter {
-  font-size: 60px;
-  color: #55acee;
-  cursor: pointer;
-}
-.btns button:nth-child(1) {
-  float: left;
+  top: 70px;
 }
 
 .btns button:nth-child(3) {
   float: right;
+  outline: none;
+  position: relative;
+  top: 9px;
+}
+
+.btns .fa {
+  font-size: 60px;
+  color: #fff;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  color: #000;
 }

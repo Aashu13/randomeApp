@@ -1,14 +1,14 @@
 var quoteObjects = [
-
   {
-    Quote: "Dream is not what you see in sleep is the thing which does't let you sleep",
+    Quote:
+      "Dream is not what you see in sleep is the thing which does't let you sleep",
     author: "A.P.j Abdul Kalam",
     Image: 'url("./images/dream.jpg")'
-
   },
 
   {
-    Quote: "All our dreams can come true if we have the courage to pursue them.",
+    Quote:
+      "All our dreams can come true if we have the courage to pursue them.",
     author: "Walt Disney",
     Image: 'url("./images/practice.jpg")'
   },
@@ -23,14 +23,11 @@ var quoteObjects = [
     Quote: "You may have to fight a battle more than once to win it",
     author: "Margaret Thatcher",
     Image: 'url("./images/fight.jpg")'
-
   },
   {
     Quote: "Winners are not those who never fail but who those never quit",
     author: "denny",
     Image: 'url("./images/neverquit.jpg")'
-
-
   },
   {
     Quote: "Don't let what you can not do interfere with what you can do.",
@@ -48,7 +45,8 @@ var quoteObjects = [
     Image: 'url("./images/sad.jpg")'
   },
   {
-    Quote: "Life is not about finding yourself. Life is about creating yourself",
+    Quote:
+      "Life is not about finding yourself. Life is about creating yourself",
     author: "Lolly Daskal",
     Image: 'url("./images/creatinglife.jpg")'
   },
@@ -64,9 +62,8 @@ var i = 0;
 function renderQuotesFunction() {
   var para = document.getElementById("para");
   para.textContent = quoteObjects[i].Quote;
-  para.style.fontSize = "25px";
+  para.style.fontSize = "27px";
   para.style.textAlign = "center";
-  para.style.color = quoteObjects[i].color;
   para.style.transition = "all 2s";
 
   var author_Name = document.getElementById("auther_Name");
@@ -85,4 +82,14 @@ function renderQuotesFunction() {
 
 renderQuotesFunction();
 
-document.getElementById('newQuote_btn').addEventListener("click", renderQuotesFunction);
+document
+  .getElementById("newQuote_btn")
+  .addEventListener("click", renderQuotesFunction);
+
+document.getElementById("tweetBtn").addEventListener("click", function() {
+  window.open("https://www.twitter.com");
+});
+
+document.getElementById("tumblrBtn").addEventListener("click", function() {
+  window.open("https://www.tumblr.com");
+});
