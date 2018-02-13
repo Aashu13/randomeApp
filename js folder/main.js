@@ -1,14 +1,11 @@
-var quoteObjects = [
-  {
-    Quote:
-      "Dream is not what you see in sleep is the thing which does't let you sleep",
+var quoteObjects = [{
+    Quote: "Dream is not what you see in sleep is the thing which does't let you sleep",
     author: "A.P.j Abdul Kalam",
     Image: 'url("./images/dream.jpg")'
   },
 
   {
-    Quote:
-      "All our dreams can come true if we have the courage to pursue them.",
+    Quote: "All our dreams can come true if we have the courage to pursue them.",
     author: "Walt Disney",
     Image: 'url("./images/practice.jpg")'
   },
@@ -45,8 +42,7 @@ var quoteObjects = [
     Image: 'url("./images/sad.jpg")'
   },
   {
-    Quote:
-      "Life is not about finding yourself. Life is about creating yourself",
+    Quote: "Life is not about finding yourself. Life is about creating yourself",
     author: "Lolly Daskal",
     Image: 'url("./images/creatinglife.jpg")'
   },
@@ -86,10 +82,10 @@ document
   .getElementById("newQuote_btn")
   .addEventListener("click", renderQuotesFunction);
 
-document.getElementById("tweetBtn").addEventListener("click", function() {
-  window.open("https://www.twitter.com");
+document.getElementById("tweetBtn").addEventListener("click", function () {
+  window.open("https://www.twitter.com/intent/tweet?text=" + quoteObjects[i].Quote);
 });
 
-document.getElementById("tumblrBtn").addEventListener("click", function() {
+document.getElementById("tumblrBtn").addEventListener("click", function () {
   window.open("https://www.tumblr.com");
 });
